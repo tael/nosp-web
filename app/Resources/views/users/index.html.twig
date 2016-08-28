@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block title %} Campaigns {% endblock %}
+
+{% block body %}
+    <h1 class="nosp-name">사용자 목록</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>선택</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        {# LOOP #}
+
+        {% for user in users %}
+        <tr>
+            <td>[v]</td>
+            <td>{{ user.getUsername }}</td>
+        </tr>
+        {% endfor %}
+
+        {# LOOP #}
+        </tbody>
+    </table>
+
+    <div class="text-center">
+        <a href="#" class="btn btn-success">선택 완료</a>
+    </div>
+{% endblock %}
+
