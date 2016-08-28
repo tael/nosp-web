@@ -24,4 +24,42 @@ monolog:
         chromephp:
             type:   chromephp
             level:  info
+doctrine:
+    dbal:
+        driver:                   pdo_mysql
+        host:                     %database_host%
+        dbname:                   %database_name%
+        port:                     %database_port%
+        user:                     %database_user%
+        password:                 %database_password%
+        persistent:               true
+        server:                   my_database_server  # SQL Anywhere specific (ServerName)
+        charset:                  UTF8
+        logging:                  %kernel.debug%
+        mapping_types:
+            enum: string
+        default_table_options:
+            # Affects schema-tool. If absent, DBAL chooses defaults
+            # based on the platform.
+            charset:              utf8
+            collate:              utf8_unicode_ci
+            engine:               InnoDB
+
+    orm:
+        auto_mapping: true
+        auto_generate_proxy_classes: false
+        proxy_namespace: Proxies
+        proxy_dir: "%kernel.cache_dir%/doctrine/orm/Proxies"
+        default_entity_manager: default
+        metadata_cache_driver: array
+        query_cache_driver: array
+        result_cache_driver: array
+
+hautelook_alice:
+    db_drivers:
+        orm: ~          # Enable Doctrine ORM if is registered
+    locale: ko_KR       # Locale to used for faker; must be a valid Faker locale otherwise will fallback to en_EN
+    seed: 1             # A seed to make sure faker generates data consistently across runs, set to null to disable
+    persist_once: false # Only persist objects once if multiple files are passed
+    loading_limit: 5    # Maximum number of time the loader will try to load the files passed
 
