@@ -1,0 +1,109 @@
+# Default configuration for extension with alias: "doctrine_cache"
+doctrine_cache:
+    acl_cache:
+        id:                   ~
+    custom_providers:
+
+        # Prototype
+        type:
+            prototype:            ~ # Required
+            definition_class:     null
+    aliases:
+
+        # Prototype
+        key:                  ~
+    providers:
+
+        # Prototype
+        name:
+            namespace:            null
+            type:                 null
+            apc:                  []
+            apcu:                 []
+            array:                []
+            void:                 []
+            wincache:             []
+            xcache:               []
+            zenddata:             []
+            custom_provider:
+                type:                 ~ # Required
+                options:
+
+                    # Prototype
+                    name:                 ~
+            couchbase:
+                connection_id:        null
+                hostnames:
+
+                    # Default:
+                    - %doctrine_cache.couchbase.hostnames%
+                username:             null
+                password:             null
+                bucket_name:          doctrine_cache
+            chain:
+                providers:            []
+            memcached:
+                connection_id:        null
+                persistent_id:        null
+                servers:
+
+                    # Prototype
+                    host:
+                        host:                 '%doctrine_cache.memcached.host%'
+                        port:                 '%doctrine_cache.memcached.port%'
+            memcache:
+                connection_id:        null
+                servers:
+
+                    # Prototype
+                    host:
+                        host:                 '%doctrine_cache.memcache.host%'
+                        port:                 '%doctrine_cache.memcache.port%'
+            file_system:
+                directory:            '%kernel.cache_dir%/doctrine/cache/file_system'
+                extension:            null
+                umask:                2
+            php_file:
+                directory:            '%kernel.cache_dir%/doctrine/cache/phpfile'
+                extension:            null
+                umask:                2
+            mongodb:
+                connection_id:        null
+                collection_id:        null
+                database_name:        doctrine_cache
+                collection_name:      doctrine_cache
+                server:               '%doctrine_cache.mongodb.server%'
+            redis:
+                connection_id:        null
+                host:                 '%doctrine_cache.redis.host%'
+                port:                 '%doctrine_cache.redis.port%'
+                password:             null
+                timeout:              null
+                database:             null
+            predis:
+                client_id:            null
+                scheme:               tcp
+                host:                 '%doctrine_cache.redis.host%'
+                port:                 '%doctrine_cache.redis.port%'
+                password:             null
+                timeout:              null
+                database:             null
+                options:
+
+                    # Prototype
+                    name:                 ~
+            riak:
+                host:                 '%doctrine_cache.riak.host%'
+                port:                 '%doctrine_cache.riak.port%'
+                bucket_name:          doctrine_cache
+                connection_id:        null
+                bucket_id:            null
+                bucket_property_list:
+                    allow_multiple:       null
+                    n_value:              null
+            sqlite3:
+                connection_id:        null
+                file_name:            null
+                table_name:           null
+            aliases:              []
+

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h2 class="nosp-name"> show Action </h2>
+    <div class="nosp-container">
+        <div class="nosp-photo"></div>
+        <div class="nosp-details">
+            <dl class="nosp-details-list">
+                <dt>ID:</dt>
+                <dd>{{ id }}</dd>
+                <dt>Name:</dt>
+                <dd>{{ name }}</dd>
+                <dt>Address:</dt>
+                <dd>{{ address }}</dd>
+            </dl>
+        </div>
+    </div>
+    {#<div class="notes-container">#}
+    {#<h2 class="notes-header">Notes</h2>#}
+    {#<div><i class="fa fa-plus plus-btn"></i></div>#}
+    {#</div>#}
+    {#<section id="cd-timeline">#}
+    {#{% for note in notes %}#}
+    {#<div class="cd-timeline-block">#}
+    {#<div class="cd-timeline-img">#}
+    {#<img src="{{ asset('images/leanna.jpeg') }}" class="img-circle" alt="Leanna!">#}
+    {#</div>#}
+    {#<div class="cd-timeline-content">#}
+    {#<h2><a href="#">AquaPelham</a></h2>#}
+    {#<p>{{ note }}</p>#}
+    {#<span class="cd-date">Dec. 10, 2015</span>#}
+    {#</div>#}
+    {#</div>#}
+    {#{% endfor %}#}
+    {#</section>#}
+{% endblock %}
+
+
+

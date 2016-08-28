@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+{% block title %} Campaigns {% endblock %}
+
+{% block body %}
+    <h1 class="nosp-name">가능한 캠페인</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>선택</th>
+            <th>캠페인번호</th>
+            <th>캠페인명</th>
+            <th>캠페인 기간</th>
+            <th>광고주</th>
+            <th>브랜드</th>
+            <th>업종</th>
+            <th>계약금액</th>
+            <th>서비스금액</th>
+            <th>상태</th>
+        </tr>
+        </thead>
+        <tbody>
+        {# LOOP #}
+
+        <tr>
+            <td>[v]</td>
+            <td>123</td>
+            <td>캠페인명 val</td>
+            <td>캠페인 기간 val</td>
+            <td>광고주 val</td>
+            <td>브랜드 val</td>
+            <td>업종 val</td>
+            <td>계약금액 val</td>
+            <td>서비스금액 val</td>
+            <td>상태 val</td>
+        </tr>
+
+        <tr>
+            <td>[v]</td>
+            <td>123</td>
+            <td>캠페인명 val</td>
+            <td>캠페인 기간 val</td>
+            <td>광고주 val</td>
+            <td>브랜드 val</td>
+            <td>업종 val</td>
+            <td>계약금액 val</td>
+            <td>서비스금액 val</td>
+            <td>상태 val</td>
+        </tr>
+
+        <tr>
+            <td>[v]</td>
+            <td>123</td>
+            <td>캠페인명 val</td>
+            <td>캠페인 기간 val</td>
+            <td>광고주 val</td>
+            <td>브랜드 val</td>
+            <td>업종 val</td>
+            <td>계약금액 val</td>
+            <td>서비스금액 val</td>
+            <td>상태 val</td>
+        </tr>
+        {# LOOP #}
+        </tbody>
+    </table>
+
+    <div class="text-center">
+        <a href="#" class="btn btn-success">선택 완료</a>
+    </div>
+{% endblock %}
+
