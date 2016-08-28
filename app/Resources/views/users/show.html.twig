@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h2 class="nosp-name"> show Action </h2>
+    <div class="nosp-container">
+        <div class="nosp-photo"></div>
+        <div class="nosp-details">
+            <dl class="nosp-details-list">
+                <dt>ID:</dt>
+                <dd>{{ user.id }}</dd>
+                <dt>Email:</dt>
+                <dd>{{ user.email }}</dd>
+            </dl>
+        </div>
+    </div>
+{% endblock %}
+
+{% block title %}
+    user show
+{% endblock %}
+
